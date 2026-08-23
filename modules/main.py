@@ -34,7 +34,7 @@ bot = Client(
     bot_token=BOT_TOKEN
 )
 
-my_name = "JB"
+my_name = "MS"
 
 cookies_file_path = os.getenv("COOKIES_FILE_PATH", "/modules/youtube_cookies.txt")
 
@@ -148,7 +148,7 @@ async def start(client: Client, msg: Message):
     await asyncio.sleep(1)
     await start_message.edit_text(
         Data.START.format(msg.from_user.mention) +
-        "Checking status Okay... Command janke kya karoge**Bot Made BY @DOCTOR_JB**🔍\n\n"
+        "Checking status Okay... Command janke kya karoge**Bot Made BY @SmartBoy_ApnaMS**🔍\n\n"
         "Progress:[🟩🟩🟩🟩🟩🟩🟩🟩🟩] 100%\n\n"
     )
 
