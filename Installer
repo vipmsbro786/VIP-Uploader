@@ -37,3 +37,4 @@ cloudscraper
 m3u8
 requests
 Flask
+setuptools
