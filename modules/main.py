@@ -311,9 +311,8 @@ async def txt_handler(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**🎞️ VID_ID: {str(count).zfill(3)}.\n\n📄 Title: {name1} {res}.mkv\n\n<pre><code>📚 Batch Name: {b_name}</code></pre>\n\n📥 Extracted By : {CR}\n\n**━━━━━✦💙𝗝𝗕💙✦━━━━━━**'
-                cc1 = f'**📁 PDF_ID: {str(count).zfill(3)}.\n\n📄 Title: {name1} .pdf\n\n<pre><code>📚 Batch Name: {b_name}</code></pre>\n\n📥 Extracted By : {CR}\n\n**━━━━━✦💙𝗝𝗕💙✦━━━━━━**'
-                    
+                cc = f'**[{str(count).zfill(3)}.]📝Title: {name1}{res}.mkv\n\n📥 Uploaded By : {CR}'
+                cc1 = f'**[{str(count).zfill(3)}.]📝Title: {name1}.pdf\n\n📥 Uploaded By : {CR}**'
                 
                 if "drive" in url:
                     try:
@@ -545,8 +544,8 @@ async def txt_handler(bot: Client, m: Message):
 
             try:  
         
-                cc = f'**🎞️ VID_ID: {str(count).zfill(3)}.\n\nTitle: {name1} STUDENTS💙{res}.mkv\n\n📚 Batch Name: {b_name}\n\n📥 Extracted By : {CR}\n\n**━━━━━✦💙𝗝𝗕💙✦━━━━━━**'
-                cc1 = f'**📁 PDF_ID: {str(count).zfill(3)}.\n\nTitle: {name1} STUDENTS💙.pdf\n\n📚 Batch Name: {b_name}\n\n📥 Extracted By : {CR}\n\n**━━━━━✦💙𝗝𝗕💙✦━━━━━━**'
+                cc = f'**[{str(count).zfill(3)}.]📝Title: {name1}{res}.mkv\n\n📥 Uploaded By : {CR}'
+                cc1 = f'**[{str(count).zfill(3)}.]📝Title: {name1}.pdf\n\n📥 Uploaded By : {CR}**'
                     
                 
                 if "drive" in url:
@@ -628,7 +627,7 @@ async def txt_handler(bot: Client, m: Message):
     await m.reply_text("𝐀𝐋𝐋 𝐃𝐎𝐍𝐄 ✅ 𝐓𝐈𝐋𝐋 𝐍𝐎𝐖 ")
 
 # ─── Flask keep-alive server for Render ───────────────────────────────────────
-flask_app = Flask(name)
+flask_app = Flask(__name__)
 
 @flask_app.route('/')
 def index():
