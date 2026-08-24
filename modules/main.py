@@ -627,6 +627,21 @@ async def txt_handler(bot: Client, m: Message):
         await m.reply_text(e)
     await m.reply_text("𝐀𝐋𝐋 𝐃𝐎𝐍𝐄 ✅ 𝐓𝐈𝐋𝐋 𝐍𝐎𝐖 ")
 
+# ─── Flask keep-alive server for Render ───────────────────────────────────────
+flask_app = Flask(name)
+
+@flask_app.route('/')
+def index():
+    return 'Bot is running!'
+
+def run_flask():
+    port = int(os.environ.get("PORT", 8000))
+    flask_app.run(host="0.0.0.0", port=port)
+
+# Start Flask in background thread so Render detects open port
+threading.Thread(target=run_flask, daemon=True).start()
+# ─────────────────────────────────────────
+
 
 
 bot.run()
